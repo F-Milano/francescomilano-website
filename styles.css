@@ -46,8 +46,8 @@ main { margin-top: auto; padding-top: 120px; }
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.project-title { font-weight: 400; }
-.project-subtitle { color: #252525; font-weight: 300; }
+.project-title { font-weight: 700; }
+.project-subtitle { color: #252525; font-weight: 400; }
 /* Thicken the lettering without changing glyph widths or line wrapping. */
 .project.is-active .project-title { -webkit-text-stroke: 0.025em currentColor; }
 .project:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
@@ -114,6 +114,11 @@ main { margin-top: auto; padding-top: 120px; }
 .image-row figure { margin: 0; }
 .content-block figcaption { margin-top: 10px; color: #777; font-size: 14px; line-height: 1.4; }
 .text-block { max-width: 850px; font-size: clamp(20px, 1.6vw, 30px); line-height: 1.5; white-space: pre-line; }
+.project-page[data-project="livmats"] .text-block {
+  max-width: none;
+  text-align: justify;
+  hyphens: auto;
+}
 
 .about-page { color: #c83232; }
 .about-page main { margin-top: 0; padding-top: 0; padding-right: 70px; }

@@ -24,6 +24,7 @@ if (!project) {
   document.querySelector("#project-title").textContent = "Project not found";
   document.querySelector("#project-subtitle").textContent = "Use the close button to return to the homepage.";
 } else {
+  document.body.dataset.project = project.id;
   document.title = `${project.title} — Francesco Milano`;
   document.querySelector("#project-title").textContent = project.title;
   document.querySelector("#project-subtitle").textContent = project.subtitle;
