@@ -47,7 +47,7 @@ main { margin-top: auto; padding-top: 120px; }
   -webkit-tap-highlight-color: transparent;
 }
 .project-title { font-weight: 400; }
-.project-subtitle { color: #777; font-weight: 300; }
+.project-subtitle { color: #252525; font-weight: 300; }
 /* Thicken the lettering without changing glyph widths or line wrapping. */
 .project.is-active .project-title { -webkit-text-stroke: 0.025em currentColor; }
 .project:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
@@ -75,7 +75,7 @@ main { margin-top: auto; padding-top: 120px; }
 .project-page h1 { overflow-wrap: anywhere; }
 .project-page .subtitle {
   margin: 16px 0 32px;
-  color: #777;
+  color: #252525;
   font-size: clamp(22px, 2.2vw, 44px);
   font-weight: 300;
   line-height: 1.25;

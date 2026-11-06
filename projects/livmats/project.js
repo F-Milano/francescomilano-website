@@ -15,7 +15,7 @@ window.projectData["livmats"] = {
                        "caption":  "Placeholder for the main project image.",
                        "alt":  "LivMatS — placeholder illustration",
                        "type":  "image",
-                       "src":  "images/01.svg"
+                       "src":  "images/01.webp"
                    },
                    {
                        "text":  "Project description to be added. Replace this placeholder with the concept, context, and approach.",
