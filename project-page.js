@@ -42,8 +42,17 @@ if (!project) {
     } else if (block.type === "imageRow") {
       element = document.createElement("div");
       element.className = "image-row";
-      element.style.setProperty("--columns", Math.min(5, Math.max(2, block.images.length)));
+      element.style.setProperty("--columns", Math.min(5, Math.max(2, block.columns || block.images.length)));
       block.images.forEach((image) => element.append(makeImageFigure(image)));
+    } else if (block.type === "video") {
+      element = document.createElement("div");
+      element.className = "video-block";
+      const iframe = document.createElement("iframe");
+      iframe.src = block.src;
+      iframe.title = block.title || "Project video";
+      iframe.allow = "fullscreen; picture-in-picture";
+      iframe.allowFullscreen = true;
+      element.append(iframe);
     } else if (block.type === "text") {
       element = document.createElement("p");
       element.className = "text-block";

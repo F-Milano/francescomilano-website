@@ -79,6 +79,14 @@ Use `image` for a large image, `text` for a paragraph, or `imageRow` for two to
 five images. Rows wrap to two columns on mobile and one on very narrow screens.
 Captions are optional. Give each meaningful image a descriptive `alt` value.
 
+For larger galleries, set `columns: 3` on an `imageRow` block to retain three
+columns on desktop regardless of the total image count. Mobile wrapping still
+applies. A `video` block embeds a video player at a responsive 16:9 ratio:
+
+```js
+{ type: "video", src: "https://player.vimeo.com/video/576404217?title=0&byline=0&portrait=0", title: "Project film" }
+```
+
 ## Navigation and interactions
 
 Hover or focus a homepage project to reveal its preview. The title thickens

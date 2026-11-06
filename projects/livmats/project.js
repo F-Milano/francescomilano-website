@@ -1,44 +1,29 @@
-// All image paths are relative to this project folder.
+﻿// All image paths are relative to this project folder.
 window.projectData = window.projectData || {};
 window.projectData["livmats"] = {
-    "title":  "LivMatS",
-    "subtitle":  "ITECH Pavilion 2020–21",
-    "previewImage":  "icon.webp",
-    "credits":  [
-                    {
-                        "value":  "ITECH 2020,  ICD, ITKE",
-                        "label":  "Credits"
-                    }
-                ],
-    "blocks":  [
-                   {
-                       "caption":  "Placeholder for the main project image.",
-                       "alt":  "LivMatS — placeholder illustration",
-                       "type":  "image",
-                       "src":  "images/01.webp"
-                   },
-                   {
-                       "text":  "Project description to be added. Replace this placeholder with the concept, context, and approach.",
-                       "type":  "text"
-                   },
-                   {
-                       "images":  [
-                                      {
-                                          "caption":  "Detail 1 — placeholder",
-                                          "alt":  "Placeholder detail 1",
-                                          "src":  "images/01.svg"
-                                      },
-                                      {
-                                          "caption":  "Detail 2 — placeholder",
-                                          "alt":  "Placeholder detail 2",
-                                          "src":  "images/02.svg"
-                                      }
-                                  ],
-                       "type":  "imageRow"
-                   },
-                   {
-                       "text":  "Additional project text to be added. Add or rearrange blocks to tell this project story.",
-                       "type":  "text"
-                   }
-               ]
+  title: "LivMatS",
+  subtitle: "ITECH Pavilion 2020–21",
+  previewImage: "icon.webp",
+  credits: [
+    { label: "Credits", value: "ITECH 2020,  ICD, ITKE" }
+  ],
+  blocks: [
+    {
+      type: "video",
+      src: "https://player.vimeo.com/video/576404217?title=0&byline=0&portrait=0",
+      title: "livMatS Pavilion — project film"
+    },
+    {
+      type: "text",
+      text: "Located in the Botanical Garden of the University of Freiburg, the livMatS Pavilion offers a viable, resource-efficient alternative to conventional construction methods and therefore represents an important step towards sustainability in architecture. It constitutes the first building ever with a load-bearing structure that is entirely made of robotically wound flax fibre, a material that is fully naturally renewable, biodegradable, and regionally available in Central Europe. Enabled by a novel combination of natural materials and advanced digital technologies, this pavilion stems from the successful collaboration of an interdisciplinary team of architects and engineers of the ITECH master`s program at the Cluster of Excellence “Integrative Computational Design and Construction for Architecture (IntCDC)” at the University of Stuttgart and biologists from the Cluster of Excellence “Living, Adaptive and Energy-autonomous Material Systems (livMatS)” at the University of Freiburg.\n\nThe bioinspired pavilion showcases how novel co-design processes that account concurrently for geometrical, material, structural, productional, environmental, and aesthetic requirements, together with advanced robotic fabrication techniques applied to natural materials, are capable to generate a unique architecture that is at the same time ecological and expressive.\n\nThe distinctive, intricate surface appearance of the structural flax elements is evocative of both vernacular examples of latticework and biological systems. The livMatS Pavilion serves as an outdoor lecture room at the University of Freiburg, which uses the Botanic Garden within the concept of “Learning from nature in Nature” as a research and teaching site."
+    },
+    {
+      type: "imageRow",
+      columns: 3,
+      images: Array.from({ length: 18 }, (_, index) => ({
+        src: `images/${index + 1}.webp`,
+        alt: `livMatS Pavilion — project photograph ${index + 1}`
+      }))
+    }
+  ]
 };
