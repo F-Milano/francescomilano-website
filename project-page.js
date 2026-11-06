@@ -49,9 +49,16 @@ if (!project) {
       element = document.createElement("div");
       element.className = "video-block";
       const iframe = document.createElement("iframe");
-      iframe.src = block.src;
+      const videoUrl = new URL(block.src, document.baseURI);
+      if (videoUrl.hostname === "player.vimeo.com") {
+        ["title", "byline", "portrait"].forEach((parameter) => {
+          videoUrl.searchParams.set(parameter, "0");
+        });
+      }
+      iframe.src = videoUrl.href;
       iframe.title = block.title || "Project video";
-      iframe.allow = "fullscreen; picture-in-picture";
+      iframe.allow = block.allow || "fullscreen; picture-in-picture";
+      iframe.referrerPolicy = block.referrerPolicy || "strict-origin-when-cross-origin";
       iframe.allowFullscreen = true;
       element.append(iframe);
     } else if (block.type === "text") {

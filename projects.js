@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 // Folder names in homepage display order. Add new project folders here.
-window.projectFolders = ["livmats", "cobogo", "hyphae", "la-muela", "tautwood"];
+window.projectFolders = ["livmats", "cobogo", "hyphae", "la-muela", "furetsu", "dahlia"];
 window.projectData = {};
 
 // Classic scripts also work when opening index.html directly from disk.

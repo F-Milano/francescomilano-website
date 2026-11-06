@@ -5,7 +5,7 @@ window.projectData["cobogo"] = {
   subtitle: "Behavioural Robotic Fabrication",
   previewImage: "icon.webp",
   credits: [
-    { label: "Credits", value: "Project team and collaborators — to be added" }
+    { label: "Credits", value: "Karen Antorveza, Talal Ammou, ITECH, ICD." }
   ],
   blocks: [
     {

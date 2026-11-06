@@ -48,6 +48,7 @@ main { margin-top: auto; padding-top: 120px; }
   -webkit-tap-highlight-color: transparent;
 }
 .project-title { font-weight: 700; }
+.project + .project { margin-left: 0.75em; }
 .project-subtitle { color: #252525; font-weight: 400; }
 /* Thicken the lettering without changing glyph widths or line wrapping. */
 .project.is-active .project-title { -webkit-text-stroke: 0.025em currentColor; }
@@ -65,9 +66,9 @@ main { margin-top: auto; padding-top: 120px; }
 .preview.is-visible { visibility: visible; }
 .preview img {
   display: block;
-  width: 34vw;
-  max-width: 800px;
-  max-height: 56vh;
+  width: 42vw;
+  max-width: 1000px;
+  max-height: 65vh;
   object-fit: contain;
 }
 
@@ -138,11 +139,15 @@ main { margin-top: auto; padding-top: 120px; }
 .image-row { display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: clamp(10px, 1.5vw, 30px); }
 .image-row figure { margin: 0; }
 .content-block figcaption { margin-top: 10px; color: #777; font-size: 14px; line-height: 1.4; }
-.text-block { max-width: 850px; font-size: clamp(20px, 1.6vw, 30px); line-height: 1.5; white-space: pre-line; }
-.project-page[data-project="livmats"] .text-block {
+.text-block {
   max-width: none;
+  font-size: clamp(20px, 1.6vw, 30px);
+  line-height: 1.5;
+  white-space: pre-line;
   text-align: justify;
   hyphens: auto;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
 .about-page { color: #c83232; }

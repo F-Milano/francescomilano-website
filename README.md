@@ -20,7 +20,6 @@ projects/
   cobogo/
   hyphae/
   la-muela/
-  tautwood/
 projects.js             # Project folder list, display order, and data loader
 project.html            # Shared project page template
 project-page.js         # Shared renderer; normally no need to edit
@@ -86,6 +85,9 @@ applies. A `video` block embeds a video player at a responsive 16:9 ratio:
 ```js
 { type: "video", src: "https://player.vimeo.com/video/576404217?title=0&byline=0&portrait=0", title: "Project film" }
 ```
+
+The renderer automatically adds `title=0`, `byline=0`, and `portrait=0` to all
+Vimeo player URLs, preserving other parameters such as private video hashes.
 
 ## Navigation and interactions
 

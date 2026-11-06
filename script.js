@@ -44,7 +44,7 @@ projects.forEach((project, index) => {
     if (activeButton === button) hidePreview();
   });
   projectList.append(button);
-  if (index < projects.length - 1) projectList.append("  ");
+  if (index < projects.length - 1) projectList.append(" ");
 
   const image = new Image();
   image.src = project.previewImage;
