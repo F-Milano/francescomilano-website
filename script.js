@@ -19,7 +19,8 @@ function showPreview(button, project) {
   preview.classList.add("is-visible");
 }
 
-window.portfolioProjects.forEach((project, index) => {
+window.portfolioProjectsReady.then((projects) => {
+projects.forEach((project, index) => {
   const button = document.createElement("a");
   button.href = project.contentReference;
   button.className = "project";
@@ -43,10 +44,14 @@ window.portfolioProjects.forEach((project, index) => {
     if (activeButton === button) hidePreview();
   });
   projectList.append(button);
-  if (index < window.portfolioProjects.length - 1) projectList.append("  ");
+  if (index < projects.length - 1) projectList.append("  ");
 
   const image = new Image();
   image.src = project.previewImage;
+});
+}).catch((error) => {
+  projectList.textContent = "Projects could not be loaded. Please refresh to try again.";
+  console.error(error);
 });
 
 previewImage.addEventListener("error", hidePreview);

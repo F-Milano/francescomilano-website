@@ -1,56 +1,93 @@
-# Francesco Milano — portfolio
+﻿# Francesco Milano — portfolio
 
-A minimal, buildless portfolio made with plain HTML, CSS, and JavaScript.
+A buildless portfolio using plain HTML, CSS, and JavaScript.
 
-## Preview locally
+## Preview
 
-Open `index.html` directly in your browser. No install or build is required.
-Alternatively, if Python is installed, run `python -m http.server 8000` from
-this repository and open http://localhost:8000. Stop the server with Ctrl+C.
+Open `index.html` directly in your browser, or use VS Code Live Server.
+No installation or build is required. All paths work on GitHub Pages.
 
-## Files
+## Folder structure
 
-- `index.html`: page structure, heading, project navigation, and preview layer.
-- `styles.css`: responsive typography, bottom-aligned list, and centered preview.
-- `projects.js`: five placeholder records with title, subtitle, local preview
-  image path, and a content reference reserved for a future project page.
-- `script.js`: renders the list and manages hover, keyboard, and touch previews.
-- `assets/previews/`: five original abstract SVG placeholder illustrations.
-
-Hover over either part of a project to reveal its preview and bold its title.
-Tab focus also reveals previews. Click or tap a project to open its project page.
-Escape dismisses any homepage preview.
-Only one image appears at a time, behind the text as in the supplied reference.
-
-## Project pages
-
-Click the homepage name to open `about.html`, containing the biography and
-clickable email and phone details. Its red text and black name match the homepage
-heading typography and are styled in `styles.css`
-under `.about-page` and `.biography`. The same fixed X returns to the homepage.
-
-`project.html` is a shared white page template; `project.js` renders the project
-selected by its URL, for example `./project.html?project=livmats`.
-The fixed X in the upper-right corner returns to `index.html`. Its top and right
-margins match the homepage heading margins. Browser Back also works normally.
-
-Each project has `credits` (label/value pairs) and ordered `blocks` in
-`projects.js`. The current starter content is assigned near the bottom of that
-file; replace it with each project's real content as it becomes available.
-Supported blocks:
-
-```js
-{ type: "image", src: "./assets/photo.jpg", alt: "Description", caption: "Optional caption" }
-{ type: "text", text: "A paragraph about the project." }
-{ type: "imageRow", images: [
-  { src: "./assets/detail-1.jpg", alt: "First detail" },
-  { src: "./assets/detail-2.jpg", alt: "Second detail" }
-] }
+```text
+projects/
+  livmats/
+    icon.svg            # Homepage hover preview (replace with your image)
+    images/
+      01.svg            # Project page images
+      02.svg
+    project.js          # This project's title, subtitle, credits, and blocks
+  cobogo/
+  hyphae/
+  la-muela/
+  tautwood/
+projects.js             # Project folder list, display order, and data loader
+project.html            # Shared project page template
+project-page.js         # Shared renderer; normally no need to edit
+index.html              # Homepage
+script.js               # Homepage list and hover interactions
+about.html              # Biography and contact details
+styles.css              # Shared responsive styles
 ```
 
-Image rows support two to five images on desktop and wrap into two columns on
-mobile (one on very narrow screens). All five pages currently contain clearly
-marked placeholder credits, images, and text, with example rows of varying sizes.
+Each project's images and data are independent. Existing SVG files are clearly
+marked placeholders; JPG, PNG, WebP, and SVG images can all be used.
 
-All assets use relative paths, compatible with a GitHub Pages repository site.
-To publish there later, configure Pages to serve the repository root.
+## Add a project
+
+1. Copy an existing project folder to `projects/your-project/`.
+2. Replace `icon.svg` with your homepage preview, for example `icon.webp`.
+3. Put page images in that folder's `images/` directory.
+4. Edit its `project.js`: change the registration key to `your-project`, update
+   the title, subtitle, preview filename, credits, and content blocks.
+5. Add `"your-project"` to `window.projectFolders` in the root `projects.js`.
+   Its position in this array determines its homepage position.
+
+The registration key must match the folder name. Use lowercase folder names
+with hyphens and no spaces. Project links are generated automatically, for
+example `./project.html?project=your-project`.
+
+A complete project data example:
+
+```js
+window.projectData = window.projectData || {};
+window.projectData["your-project"] = {
+  title: "Project title",
+  subtitle: "Project subtitle",
+  previewImage: "icon.webp",
+  credits: [
+    { label: "Design", value: "Names of collaborators" },
+    { label: "Photography", value: "Photographer's name" }
+  ],
+  blocks: [
+    { type: "image", src: "images/01.webp", alt: "Main project view" },
+    { type: "text", text: "Your project description." },
+    {
+      type: "imageRow",
+      images: [
+        { src: "images/02.webp", alt: "First detail", caption: "Optional caption" },
+        { src: "images/03.webp", alt: "Second detail" }
+      ]
+    }
+  ]
+};
+```
+
+Image paths are relative to the individual project folder, not the repository
+root. Blocks appear in the order listed. Add, remove, or rearrange them freely.
+Use `image` for a large image, `text` for a paragraph, or `imageRow` for two to
+five images. Rows wrap to two columns on mobile and one on very narrow screens.
+Captions are optional. Give each meaningful image a descriptive `alt` value.
+
+## Navigation and interactions
+
+Hover or focus a homepage project to reveal its preview. The title thickens
+without shifting the surrounding text. Click or tap to open the project page.
+The fixed X returns to the homepage; browser Back works normally.
+
+Click the homepage name to open the biography. Edit its text in `about.html`.
+Its black name and red text match the homepage heading typography.
+
+## GitHub Pages
+
+Configure GitHub Pages to serve this repository's root. No build step is needed.

@@ -1,7 +1,5 @@
 "use strict";
 
-const projectId = new URLSearchParams(window.location.search).get("project");
-const project = window.portfolioProjects.find((item) => item.id === projectId);
 const content = document.querySelector("#project-content");
 
 function makeImageFigure(image, eager = false) {
@@ -19,6 +17,9 @@ function makeImageFigure(image, eager = false) {
   return figure;
 }
 
+window.portfolioProjectsReady.then((projects) => {
+const projectId = new URLSearchParams(window.location.search).get("project");
+const project = projects.find((item) => item.id === projectId);
 if (!project) {
   document.querySelector("#project-title").textContent = "Project not found";
   document.querySelector("#project-subtitle").textContent = "Use the close button to return to the homepage.";
@@ -54,3 +55,8 @@ if (!project) {
     content.append(element);
   });
 }
+}).catch((error) => {
+  document.querySelector("#project-title").textContent = "Project could not be loaded";
+  document.querySelector("#project-subtitle").textContent = "Please refresh or use the close button to return to the homepage.";
+  console.error(error);
+});
