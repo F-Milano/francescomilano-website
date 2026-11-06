@@ -6,12 +6,8 @@ window.projectData["livmats"] = {
     "previewImage":  "icon.webp",
     "credits":  [
                     {
-                        "value":  "Project team and collaborators — to be added",
+                        "value":  "ITECH 2020,  ICD, ITKE",
                         "label":  "Credits"
-                    },
-                    {
-                        "value":  "Placeholder illustrations — replace with project photography",
-                        "label":  "Images"
                     }
                 ],
     "blocks":  [

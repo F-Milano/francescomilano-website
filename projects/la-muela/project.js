@@ -8,10 +8,6 @@ window.projectData["la-muela"] = {
                     {
                         "value":  "Project team and collaborators — to be added",
                         "label":  "Credits"
-                    },
-                    {
-                        "value":  "Placeholder illustrations — replace with project photography",
-                        "label":  "Images"
                     }
                 ],
     "blocks":  [
