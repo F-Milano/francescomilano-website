@@ -84,17 +84,24 @@ main { margin-top: auto; padding-top: 120px; }
   flex-direction: column;
   gap: var(--project-gap);
 }
-.project-page h1 { overflow-wrap: anywhere; }
+.project-page h1 { overflow-wrap: anywhere; line-height: 1; }
 .project-page .subtitle {
   margin: 0;
   color: #252525;
   font-size: clamp(22px, 2.2vw, 44px);
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1;
 }
-.credits { margin: 0; font-size: 16px; line-height: 1.6; color: #777; }
-.credits dt { color: #252525; }
-.credits dd { margin: 0 0 12px; }
+.credits { margin: 0; font-size: 16px; line-height: 1; color: #252525; }
+/* Measure heading gaps from the visible letter edges where supported. */
+.project-page h1, .project-page .subtitle, .credits {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+.credits dt { display: inline; color: #252525; }
+.credits dt::after { content: ": "; }
+.credits dd { display: inline; margin: 0; }
+.credits dd:not(:last-child)::after { content: ""; display: block; height: 12px; }
 .credits dd:last-child { margin-bottom: 0; }
 .close-project {
   position: fixed;
