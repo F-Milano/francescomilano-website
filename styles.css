@@ -40,6 +40,7 @@ main { margin-top: auto; padding-top: 120px; }
   color: inherit;
   font: inherit;
   text-align: left;
+  text-decoration: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -67,10 +68,61 @@ main { margin-top: auto; padding-top: 120px; }
   object-fit: contain;
 }
 
+.project-page main { margin-top: 0; padding-top: 0; }
+.project-heading { padding-right: 70px; }
+.project-page h1 { overflow-wrap: anywhere; }
+.project-page .subtitle {
+  margin: 16px 0 32px;
+  color: #777;
+  font-size: clamp(22px, 2.2vw, 44px);
+  font-weight: 300;
+  line-height: 1.25;
+}
+.credits { margin: 0; font-size: 16px; line-height: 1.6; color: #777; }
+.credits dt { color: #252525; }
+.credits dd { margin: 0 0 12px; }
+.close-project {
+  position: fixed;
+  top: clamp(24px, 3.3vw, 68px);
+  right: clamp(24px, 3.3vw, 68px);
+  width: 48px;
+  height: 48px;
+  z-index: 3;
+  background: #fff;
+  color: #252525;
+}
+.close-project::before, .close-project::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 5px;
+  width: 38px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+.close-project::after { transform: rotate(-45deg); }
+.close-project:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.project-content { margin-top: clamp(48px, 7vw, 140px); }
+.content-block { margin: 0 0 clamp(28px, 4vw, 80px); }
+.content-block img { display: block; width: 100%; height: auto; }
+.image-row { display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: clamp(10px, 1.5vw, 30px); }
+.image-row figure { margin: 0; }
+.content-block figcaption { margin-top: 10px; color: #777; font-size: 14px; line-height: 1.4; }
+.text-block { max-width: 850px; font-size: clamp(20px, 1.6vw, 30px); line-height: 1.5; white-space: pre-line; }
+
 @media (max-width: 600px) {
   body { padding: 28px 22px; }
   h1 { font-size: clamp(34px, 8.5vw, 50px); }
   main { padding-top: 220px; }
   #projects { font-size: 22px; line-height: 1.4; }
   .preview img { width: 82vw; max-height: 45svh; }
+  .project-page main { padding-top: 0; }
+  .close-project { top: 28px; right: 22px; width: 36px; height: 36px; }
+  .close-project::before, .close-project::after { top: 17px; left: 3px; width: 30px; }
+  .project-heading { padding-right: 50px; }
+  .image-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .image-row { grid-template-columns: 1fr; }
 }

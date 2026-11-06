@@ -20,8 +20,8 @@ function showPreview(button, project) {
 }
 
 window.portfolioProjects.forEach((project, index) => {
-  const button = document.createElement("button");
-  button.type = "button";
+  const button = document.createElement("a");
+  button.href = project.contentReference;
   button.className = "project";
   button.dataset.project = project.id;
   const title = document.createElement("span");
@@ -42,8 +42,6 @@ window.portfolioProjects.forEach((project, index) => {
   button.addEventListener("blur", () => {
     if (activeButton === button) hidePreview();
   });
-  // Until project pages exist, activation displays the preview without a dead link.
-  button.addEventListener("click", () => showPreview(button, project));
   projectList.append(button);
   if (index < window.portfolioProjects.length - 1) projectList.append("  ");
 
