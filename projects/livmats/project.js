@@ -3,7 +3,7 @@ window.projectData = window.projectData || {};
 window.projectData["livmats"] = {
     "title":  "LivMatS",
     "subtitle":  "ITECH Pavilion 2020–21",
-    "previewImage":  "icon.svg",
+    "previewImage":  "icon.webp",
     "credits":  [
                     {
                         "value":  "Project team and collaborators — to be added",
