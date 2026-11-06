@@ -25,7 +25,8 @@ Only one image appears at a time, behind the text as in the supplied reference.
 ## Project pages
 
 Click the homepage name to open `about.html`, containing the biography and
-clickable email and phone details. Its muted blue text is styled in `styles.css`
+clickable email and phone details. Its red text and black name match the homepage
+heading typography and are styled in `styles.css`
 under `.about-page` and `.biography`. The same fixed X returns to the homepage.
 
 `project.html` is a shared white page template; `project.js` renders the project
