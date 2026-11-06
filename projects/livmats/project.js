@@ -1,6 +1,7 @@
 ﻿// All image paths are relative to this project folder.
 window.projectData = window.projectData || {};
-window.projectData["livmats"] =   title: "LivMatS",
+window.projectData["livmats"] = {
+  title: "LivMatS",
   subtitle: "ITECH Pavilion 2020–21",
   previewImage: "icon.webp",
   credits: [
@@ -25,7 +26,4 @@ window.projectData["livmats"] =   title: "LivMatS",
       }))
     }
   ]
-"
-                   }
-               ]
 };
