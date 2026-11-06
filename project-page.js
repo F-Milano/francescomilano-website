@@ -57,7 +57,19 @@ if (!project) {
     } else if (block.type === "text") {
       element = document.createElement("p");
       element.className = "text-block";
-      element.textContent = block.text;
+      if (Array.isArray(block.text)) {
+        block.text.forEach((part) => {
+          if (typeof part === "string") {
+            element.append(part);
+          } else if (part.emphasis) {
+            const emphasis = document.createElement("em");
+            emphasis.textContent = part.emphasis;
+            element.append(emphasis);
+          }
+        });
+      } else {
+        element.textContent = block.text;
+      }
     } else {
       return;
     }
