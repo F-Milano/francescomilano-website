@@ -11,9 +11,7 @@ window.projectData["tamaco"] = {
     {
       type: "text",
       text: [
-        "TaMaCo (Taller de Materiales y Construcción), one of the modules of ",
-        { text: "cheLA,", href: "http://chela.org.ar/" },
-        " is a 160m2 workshop dedicated to experimentation in art, design and architecture. Its equipment is not only composedby traditional design and fabrication tools (woodwork, metalwork...), but also by digital fabrication machines such as 3D printers , a laser cutter, and a CNC mill. Its cultural proposal includes lectures, workshops, and a residences program for national and international artists. Since its outset, TaMaCo collaborate closely with several cultural and educational institutions, such as UBA (University of Buenos Aires), CCSM (Centro Cultural San Martin), ArteBa, Fundacion Telefonica. From 2015 to 2018, the project has raised about 250 USD in fundings through the program “Mecenazgo Cultural” established by the Ministry of Culture of the city of Buenos Aires, and received the sponsorship of different companies such as Bosh and Trotec."
+        "TaMaCo (Taller de Materiales y Construcción), one of the modules of ", { text: "cheLA,", href: "http://chela.org.ar/" }, " is a 160m2 workshop dedicated to experimentation in art, design and architecture. Its equipment is not only composedby traditional design and fabrication tools (woodwork, metalwork...), but also by digital fabrication machines such as 3D printers , a laser cutter, and a CNC mill. Its cultural proposal includes lectures, workshops, and a residences program for national and international artists. Since its outset, TaMaCo collaborate closely with several cultural and educational institutions, such as UBA (University of Buenos Aires), CCSM (Centro Cultural San Martin), ArteBa, Fundacion Telefonica. From 2015 to 2018, the project has raised about 250 USD in fundings through the program “Mecenazgo Cultural” established by the Ministry of Culture of the city of Buenos Aires, and received the sponsorship of different companies such as Bosh and Trotec."
       ]
     },
     { type: "image", src: "images/d1.png", alt: "TaMaCo — project drawing d1" },
