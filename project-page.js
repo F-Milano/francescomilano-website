@@ -68,6 +68,11 @@ if (!project) {
         block.text.forEach((part) => {
           if (typeof part === "string") {
             element.append(part);
+          } else if (part.href) {
+            const link = document.createElement("a");
+            link.href = part.href;
+            link.textContent = part.text;
+            element.append(link);
           } else if (part.emphasis) {
             const emphasis = document.createElement("em");
             emphasis.textContent = part.emphasis;

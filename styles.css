@@ -34,6 +34,7 @@ main { margin-top: auto; padding-top: 120px; }
   font-size: clamp(21px, 1.55vw, 34px);
   line-height: 1.3;
   letter-spacing: 0.005em;
+  text-align: left;
 }
 .project {
   display: inline;
@@ -48,7 +49,8 @@ main { margin-top: auto; padding-top: 120px; }
   -webkit-tap-highlight-color: transparent;
 }
 .project-title { font-weight: 700; }
-.project + .project { margin-left: 0.75em; }
+/* Trailing spacing keeps links flush left when they wrap onto a new line. */
+.project:not(:last-child) { margin-right: 0.75em; }
 .project-subtitle { color: #252525; font-weight: 400; }
 /* Thicken the lettering without changing glyph widths or line wrapping. */
 .project.is-active .project-title { -webkit-text-stroke: 0.025em currentColor; }
