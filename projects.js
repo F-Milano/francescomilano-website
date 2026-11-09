@@ -1,7 +1,7 @@
 ﻿"use strict";
 
 // Folder names in homepage display order. Add new project folders here.
-window.projectFolders = ["livmats", "cobogo", "hyphae", "la-muela", "furetsu", "dahlia", "cerimonias", "mesas-luminicas", "rotoscoping-architecture", "cnc-furniture"];
+window.projectFolders = ["livmats", "cobogo", "hyphae", "la-muela", "furetsu", "dahlia", "cerimonias", "mesas-luminicas", "rotoscoping-architecture", "cnc-furniture", "tautwood", "modulos-efimeros-de-residencia", "tamaco", "palabras-para-una-tormenta", "geometry-of-structural-form", "buga-fibre-pavillion", "tectonica-digital"];
 window.projectData = {};
 
 // Classic scripts also work when opening index.html directly from disk.

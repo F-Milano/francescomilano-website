@@ -33,7 +33,20 @@ if (!project) {
     const label = document.createElement("dt");
     const value = document.createElement("dd");
     label.textContent = credit.label;
-    value.textContent = credit.value;
+    if (Array.isArray(credit.value)) {
+      credit.value.forEach((part) => {
+        if (typeof part === "string") {
+          value.append(part);
+        } else if (part.href) {
+          const link = document.createElement("a");
+          link.href = part.href;
+          link.textContent = part.text;
+          value.append(link);
+        }
+      });
+    } else {
+      value.textContent = credit.value;
+    }
     credits.append(label, value);
   });
   project.blocks.forEach((block, index) => {

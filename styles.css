@@ -3,6 +3,7 @@
   color: #252525;
   background: #fff;
   font-synthesis: none;
+  --page-side-margin: clamp(24px, 3.3vw, 68px);
 }
 
 * { box-sizing: border-box; }
@@ -11,7 +12,7 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: 100svh;
-  padding: clamp(24px, 3.3vw, 68px);
+  padding: clamp(24px, 3.3vw, 68px) var(--page-side-margin);
   display: flex;
   flex-direction: column;
 }
@@ -110,7 +111,7 @@ main { margin-top: auto; padding-top: 120px; }
 .close-project {
   position: fixed;
   top: clamp(24px, 3.3vw, 68px);
-  right: clamp(24px, 3.3vw, 68px);
+  right: var(--page-side-margin);
   width: 48px;
   height: 48px;
   z-index: 3;
@@ -152,7 +153,8 @@ main { margin-top: auto; padding-top: 120px; }
   text-box-edge: cap alphabetic;
 }
 
-.about-page { color: #c83232; }
+.about-page { color: #fff; background: #ff4000; }
+.about-page .close-project { color: #fff; background: #ff4000; }
 .about-page main { margin-top: 0; padding-top: 0; padding-right: 70px; }
 .biography {
   font-size: clamp(32.4px, 3.735vw, 79.2px);
@@ -163,7 +165,7 @@ main { margin-top: auto; padding-top: 120px; }
 }
 .biography p { margin: 0 0 1em; }
 .biography a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.12em; }
-.biography .biography-name { color: #252525; text-decoration: none; }
+.biography .biography-name { color: #000; text-decoration: none; }
 .biography a:hover { text-decoration-thickness: 2px; }
 .biography address { font: inherit; overflow-wrap: anywhere; }
 
