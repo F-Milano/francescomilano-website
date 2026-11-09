@@ -19,9 +19,7 @@ window.projectData["buga-fibre-pavillion"] = {
     {
       type: "text",
       text: [
-        { emphasis: "“In biology most load-bearing structures are fibre composites. They are made from fibres, as for example cellulose, chitin or collagen, and a matrix material that supports them and maintains their relative position. The astounding performance and unrivalled resource efficiency of biological structures stem from these fibrous systems. Their organization, directionality and density is finely tuned and locally varied in order to ensure that material is only placed where it is needed. The BUGA Fibre Pavilion aims to transfer this biological principle of load-adapted and thus highly differentiated fibre composite systems into architecture. Manmade composites, such as the glass- or carbon-fibre-reinforced plastics that were used for this building, are ideally suited for such an approach because they share their fundamental characteristics with natural composites.”" },
-        " ",
-        { text: "ICD — BUGA Fibre Pavilion", href: "https://www.icd.uni-stuttgart.de/projects/buga-fiber-pavilion/" }
+        { emphasis: "“In biology most load-bearing structures are fibre composites. They are made from fibres, as for example cellulose, chitin or collagen, and a matrix material that supports them and maintains their relative position. The astounding performance and unrivalled resource efficiency of biological structures stem from these fibrous systems. Their organization, directionality and density is finely tuned and locally varied in order to ensure that material is only placed where it is needed. The BUGA Fibre Pavilion aims to transfer this biological principle of load-adapted and thus highly differentiated fibre composite systems into architecture. Manmade composites, such as the glass- or carbon-fibre-reinforced plastics that were used for this building, are ideally suited for such an approach because they share their fundamental characteristics with natural composites.”" }, " ", { text: "ICD — BUGA Fibre Pavilion", href: "https://www.icd.uni-stuttgart.de/projects/buga-fiber-pavilion/" }
       ]
     },
     {
