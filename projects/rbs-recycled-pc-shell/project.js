@@ -21,10 +21,20 @@ window.projectData["rbs-recycled-pc-shell"] = {
       type: "imageRow",
       columns: 2,
       images: [
-        { src: "images/2.webp", alt: "RBS Recycled PC Shell — project image 2" },
-        { src: "images/1.webp", alt: "RBS Recycled PC Shell — project image 1" }
+        { src: "images/1.webp", alt: "RBS Recycled PC Shell — project image 2" },
+        { src: "images/2.gif", alt: "RBS Recycled PC Shell — project image 1" }
       ]
     },
-    { type: "image", src: "images/3.webp", alt: "RBS Recycled PC Shell — project image 3" }
+    { type: "image", src: "images/3.webp", alt: "RBS Recycled PC Shell — project image 3" },
+    {
+      type: "video",
+      src: "https://player.vimeo.com/video/1245477028",
+      title: "RBS Recycled PC Shell — project video 2"
+    },
+    {
+      type: "video",
+      src: "https://player.vimeo.com/video/1245477889",
+      title: "RBS Recycled PC Shell — project video 3"
+    }
   ]
 };
