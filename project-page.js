@@ -58,6 +58,16 @@ if (!project) {
       element.className = "image-row";
       element.style.setProperty("--columns", Math.min(5, Math.max(2, block.columns || block.images.length)));
       block.images.forEach((image) => element.append(makeImageFigure(image)));
+    } else if (block.type === "imageColumns") {
+      element = document.createElement("div");
+      element.className = "image-row";
+      element.style.setProperty("--columns", block.columns.length);
+      block.columns.forEach((images) => {
+        const column = document.createElement("div");
+        column.className = "image-stack";
+        images.forEach((image) => column.append(makeImageFigure(image)));
+        element.append(column);
+      });
     } else if (block.type === "video") {
       element = document.createElement("div");
       element.className = "video-block";
@@ -86,6 +96,10 @@ if (!project) {
             link.href = part.href;
             link.textContent = part.text;
             element.append(link);
+          } else if (part.strong) {
+            const strong = document.createElement("strong");
+            strong.textContent = part.strong;
+            element.append(strong);
           } else if (part.emphasis) {
             const emphasis = document.createElement("em");
             emphasis.textContent = part.emphasis;
@@ -99,6 +113,7 @@ if (!project) {
       return;
     }
     element.classList.add("content-block");
+    if (block.spaceBefore) element.style.marginTop = "var(--project-gap)";
     content.append(element);
   });
 }

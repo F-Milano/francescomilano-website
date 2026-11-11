@@ -24,6 +24,9 @@ window.portfolioProjectsReady = Promise.all(window.projectFolders.map((id) => {
         previewImage: asset(data.previewImage),
         blocks: data.blocks.map((block) => {
           if (block.type === "image") return { ...block, src: asset(block.src) };
+          if (block.type === "imageColumns") {
+            return { ...block, columns: block.columns.map((column) => column.map((image) => ({ ...image, src: asset(image.src) }))) };
+          }
           if (block.type === "imageRow") {
             return { ...block, images: block.images.map((image) => ({ ...image, src: asset(image.src) })) };
           }

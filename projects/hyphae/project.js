@@ -12,9 +12,12 @@ window.projectData["hyphae"] = {
       type: "text",
       text: "The mycelium is the vegetative part of fungi, which consists of a network of interconnected filamentous cells called hyphae. The logic followed by this structure while growing can be outlined in a defined set of rules: it is concentric, it is directional, it branches progressively, it is space-filling, etc.. We simulated this conduct computationally through an agent-based algorithm, where a certain amount of particles iteratively move away from a central point, wanders in space, and reproduce following precise behavioural instructions. Volumetric propertiey was given to the trajectory of each particle using a voxelization algorithm. The wire frame system was turned into a thee dimensional object, which was finally materialized through SLS 3D printing."
     },
+    { type: "image", src: "images/6.webp", alt: "Hyphae Growth — project image 6" },
+    { type: "image", src: "images/5.webp", alt: "Hyphae Growth — project image 5" },
     { type: "image", src: "images/1.jpg", alt: "Hyphae Growth — project image 1" },
     { type: "image", src: "images/2.jpg", alt: "Hyphae Growth — project image 2" },
     { type: "image", src: "images/3.jpg", alt: "Hyphae Growth — project image 3" },
-    { type: "image", src: "images/4.jpg", alt: "Hyphae Growth — project image 4" }
+    { type: "image", src: "images/4.jpg", alt: "Hyphae Growth — project image 4" },
+    { type: "image", src: "images/5.webp", alt: "Hyphae Growth — project image 5" }
   ]
 };
