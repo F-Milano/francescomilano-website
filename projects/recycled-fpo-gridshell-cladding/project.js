@@ -15,7 +15,7 @@ window.projectData["recycled-fpo-gridshell-cladding"] = {
     },
     {
       type: "text",
-      text: "In the framework of my PhD research at ETH Zürich, I explored the possibility of recycling Thermoplastic Polyolefin (FPO) from old roof waterproofing membranes to produce large-scale robotic 3D-printed façade components. The material was reclaimed from demolition sites. After collection, the membranes were cleaned, shredded, and reshaped into pellets. The façade components are custom shingles, designed to connect to a free-form timber substructure. The project was developped in collaboration with SIKA. Full study: “Post-consumer flexible polyolefin (FPO) as a material for bespoke 3D-printed façades” (ICSA 2025)."
+      text: "In the framework of my PhD research at ETH Zürich, I explored the possibility of recycling Thermoplastic Polyolefin (FPO) from old roof waterproofing membranes to produce large-scale robotic 3D-printed façade components. The material was reclaimed from demolition sites. After collection, the membranes were cleaned, shredded, and reshaped into pellets. The façade components are custom shingles, designed to connect to a free-form timber substructure. The project was developped in collaboration with SIKA. Related research: “Post-consumer flexible polyolefin (FPO) as a material for bespoke 3D-printed façades” (ICSA 2025)."
     },
     { type: "image", src: "images/1.webp", alt: "Recycled FPO Gridshell Cladding — project image 1" },
     { type: "image", src: "images/2.webp", alt: "Recycled FPO Gridshell Cladding — project image 2" },
