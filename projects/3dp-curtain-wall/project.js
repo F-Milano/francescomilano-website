@@ -11,11 +11,7 @@ window.projectData["3dp-curtain-wall"] = {
     {
       type: "text",
       text: [
-        "In the framework of my PhD research at ETH Zürich, I have explored the potential of combining custom 3D-printed façade panels with a standard curtain wall connections system. The concept has been evaluated through the construction of a large scale demonstrator, tested both for air and water tightness (Hochschule Luzern). The project was developped in collaboration with RAICO. Full study: ",
-        {
-          text: "“Facade Design and Engineering” Vol. 12 No. 1",
-          href: "https://jfde.eu/index.php/jfde/article/view/325/267"
-        }
+        "In the framework of my PhD research at ETH Zürich, I have explored the potential of combining custom 3D-printed façade panels with a standard curtain wall connection system. The concept has been evaluated through the construction of a large-scale demonstrator, tested for both air and water tightness (Hochschule Luzern). The project was developed in collaboration with RAICO. Related research: \"Integration of a 3D-Printed Façade Unit in a Curtain Wall System: Prototyping and Assessment\" DOI: https://doi.org/10.47982/jfde.2024.325"
       ]
     },
     {
